@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:m_manage/bayar.dart';
+import 'package:m_manage/confirm_page.dart';
 import 'package:m_manage/masukoganisasi.dart';
 import 'package:m_manage/organisasi.dart';
 import 'package:m_manage/saldo.dart';
@@ -44,6 +45,14 @@ class AdminPage extends StatelessWidget {
                 style: TextStyle(color: Colors.grey[600]),
               ),
               leading: Icon(Icons.group),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return IzinPage();
+                }));
+              },
+              title: Text("List Perizinan"),
             )
           ],
         ),
